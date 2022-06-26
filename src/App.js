@@ -10,8 +10,8 @@ function App() {
     <Routes>
       <Route path='/' element={<Layout />}>
         {/* Public Routes */}
-        <Route index element={<Public />} />
-        <Route path='login' element={<Login />} />
+        {/* <Route index element={<Public />} /> */}
+        <Route index element={<Login />} />
 
         {/* Protected Routes */}
         <Route element={<RequireAuth />}>

@@ -55,8 +55,14 @@ const Login = () => {
     const handlePwdInput = (e) => setPwd(e.target.value)
 
     const content = isLoading ? <h1>Loading...</h1> : (
-        <section className="login">
-            <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
+        <section className="login flex">
+          <div className="left-side">
+            <h3>“Without hard work, nothing grows but weeds.”</h3>
+          </div>
+          <div className="right-side">
+
+          </div>
+            {/* <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
 
             <h1>Employee Login</h1>
 
@@ -81,7 +87,7 @@ const Login = () => {
                     required
                 />
                 <button>Sign In</button>
-            </form>
+            </form> */}
         </section>
     )
 
