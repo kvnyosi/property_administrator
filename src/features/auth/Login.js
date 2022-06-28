@@ -1,9 +1,10 @@
 import React, { useState, useRef, useEffect} from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link,Route } from 'react-router-dom';
 
 import { useDispatch } from 'react-redux';
 import { setCredentials } from './authSlice';
 import { useLoginMutation } from './authApiSlice';
+import Dashboard from './Dashboard';
 
 import Logo from '../../assets/VBM-Logo.png';
 
@@ -82,7 +83,10 @@ const Login = () => {
                     <i className="icon show-password"></i>
                     <input className="input-box" type="password" placeholder="Type your password here" />
                   </div>
-                  <input type="submit" className="button-orange" value="Sign in"/>
+                  {/* <input type="submit" className="button-orange" value="Sign in"/> */}
+                  <div className="form-set">
+                    <Link className="button-orange" to="/dashboard" >Sign In</Link>
+                  </div>
                 </form>
                 <p>Version 1.0.0</p>
               </div>

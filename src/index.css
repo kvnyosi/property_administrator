@@ -282,8 +282,19 @@ i.icon {
     flex-direction: column;
 }
 
+.right-side form .form-set:nth-child(2) {
+    margin-bottom: 4rem;
+}
+
 .right-side form input[type="submit"] {
     margin-top: 4rem;
+}
+
+.right-side form a {
+    width: 140px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
 }
 
 .right-side p {
