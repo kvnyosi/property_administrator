@@ -68,19 +68,18 @@ const Login = () => {
                 <img src={Logo} alt="logo"/>
                 <h1 className="fs-700">Welcome to<br/><span className="uppercase">property</span> Admin Panel</h1>
                 <h6>Sign in to your account below</h6>
-                <form className="flow">
+                <form className="flow" onSubmit={handleSubmit}>
                   <div className="form-set flow flow-space--small">
                     <label>Email</label>
-                    <input className="input-box" type="email" placeholder="Type your email here" />
+                    <input className="input-box" type="email" placeholder="Type your email here" onChange={handleUserInput} />
                   </div>
                   <div className="form-set flow flow-space--small">
                     <label>Password</label>
                     <i className="icon show-password"></i>
-                    <input className="input-box" type="password" placeholder="Type your password here" />
+                    <input className="input-box" type="password" placeholder="Type your password here" onChange={handlePwdInput}/>
                   </div>
-                  {/* <input type="submit" className="button-orange" value="Sign in"/> */}
                   <div className="form-set">
-                    <Link className="button-orange" to="/dashboard" >Sign In</Link>
+                    <button className="button-orange">Sign In</button>
                   </div>
                 </form>
                 <p>Version 1.0.0</p>
