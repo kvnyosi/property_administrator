@@ -1,26 +1,28 @@
-import { Routes,Route } from 'react-router-dom';
-import Layout from './component/Layout';
-import Public from './component/Public';
-import Login from './features/auth/Login';
-import Welcome from './features/auth/Welcome';
-import RequireAuth from './features/auth/RequireAuth';
+import { Routes, Route } from 'react-router-dom'
+import Layout from './component/Layout'
+import Public from './component/Public'
+import Login from './features/auth/Login'
+import Welcome from './features/auth/Welcome'
+import RequireAuth from './features/auth/RequireAuth'
+// import UsersList from './features/users/UsersList'
 
 function App() {
   return (
     <Routes>
-      <Route path='/' element={<Layout />}>
-        {/* Public Routes */}
-        {/* <Route index element={<Public />} /> */}
-        <Route index element={<Login />} />
+      <Route path="/" element={<Layout />}>
+        {/* public routes */}
+        <Route index element={<Public />} />
+        <Route path="login" element={<Login />} />
 
-        {/* Protected Routes */}
+        {/* protected routes */}
         <Route element={<RequireAuth />}>
-          <Route path='welcome' element={<Welcome />} />
+          <Route path="welcome" element={<Welcome />} />
+          {/* <Route path="userslist" element={<UsersList />} /> */}
         </Route>
 
       </Route>
-    </Routes>  
-  );
+    </Routes>
+  )
 }
 
 export default App;
